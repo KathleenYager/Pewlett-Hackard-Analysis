@@ -127,7 +127,7 @@ e.last_name,
 	e.gender,
 	s.salary,
 	de.to_date
-INTO emp_info
+--INTO emp_info
 FROM employees as e
 INNER JOIN salaries as s
 ON (e.emp_no = s.emp_no)
@@ -180,7 +180,7 @@ SELECT ri.emp_no,
 	ri.first_name,
 	ri.last_name,
 	di.dept_name
-INTO sale_dev_info
+--INTO sale_dev_info
 FROM retirement_info AS ri
 INNER JOIN dept_info AS di
 ON (ri.emp_no = di.emp_no)
