@@ -24,15 +24,11 @@ WHERE to_date = '9999-01-01'
 ORDER BY emp_no, to_date DESC;
 
 SELECT title, COUNT(title)
+INTO retiring_titles
 FROM unique_titles
 GROUP BY title
 ORDER BY (count) DESC;
 
-SELECT emp_no, first_name, last_name, title
-INTO retiring_titles
-FROM unique_titles
-GROUP BY emp_no, first_name, last_name, title 
-ORDER BY title DESC;
 
 SELECT DISTINCT ON (emp_no)
 	e.emp_no, 
